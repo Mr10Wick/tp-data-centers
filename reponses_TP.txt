@@ -1,0 +1,59 @@
+cat > reponses_TP.txt << 'EOF'
+Réponses aux questions — TP Data Centers, Green IT et Data Science
+==================================================================
+
+Étape 1 — Pourquoi un dictionnaire de données est-il indispensable ?
+--------------------------------------------------------------------
+Un dictionnaire de données garantit une compréhension commune des champs
+(noms, définitions, unités, formats, valeurs manquantes autorisées). Il évite
+les ambiguïtés (ex. MW vs kW, % vs fraction), facilite le nettoyage, assure la
+traçabilité (qui a créé/modifié quoi), et permet d’appliquer des règles de
+qualité et de gouvernance (contrôles, audits, conformité). Sans dictionnaire,
+les jointures sont risquées, les KPI deviennent non comparables et les décisions
+peuvent être erronées.
+
+Étape 2 — La puissance permet-elle de prédire la durabilité ?
+-------------------------------------------------------------
+Observation : le nuage de points “puissance installée (MW) vs % d’énergie
+renouvelable” ne montre pas de tendance nette et les corrélations sont faibles.
+Conclusion : la puissance d’un data center ne prédit pas sa durabilité.
+La part d’énergie renouvelable dépend surtout du mix électrique local, des
+contrats d’achat verts (PPAs/GoO/REC), de la localisation (climat, réseau),
+et des politiques internes. Deux sites très puissants peuvent avoir des profils
+d’énergie totalement différents.
+
+Étape 3 — Europe vs Amérique du Nord : que disent les écarts ?
+---------------------------------------------------------------
+Dans nos agrégations, l’Europe a une moyenne ~65 % (écart-type ~32),
+l’Amérique du Nord ~68 % (écart-type ~37), avec un effectif NA faible (n≈3).
+Ces chiffres suggèrent des niveaux comparables, mais l’interprétation doit
+tenir compte de l’échantillon. D’un point de vue gouvernance : l’UE (EED,
+CSRD, taxonomie, obligations de reporting/efficacité) pousse une adoption plus
+homogène, tandis que les approches américaines (ENERGY STAR, objectifs
+volontaires, PPAs privés) laissent davantage de dispersion entre acteurs.
+=> Les écarts reflètent : cadre européen plus normatif et reporting structuré,
+vs cadre nord-américain plus volontaire et dépendant des stratégies des opérateurs.
+
+Étape 4 — Pourquoi un R² faible reste une information précieuse ?
+------------------------------------------------------------------
+Un R² faible invalide l’hypothèse “plus de MW = plus vert” et évite des
+décisions simplistes. C’est utile car :
+1) cela oriente les actions vers les vrais leviers (mix réseau, contrats verts,
+   efficacité énergétique, localisation, refroidissement) ;
+2) cela évite le greenwashing (corrélations non prouvées) ;
+3) cela améliore la priorisation (politiques publiques, achats d’énergie,
+   choix de sites) ;
+4) cela documente l’incertitude et la variabilité (gouvernance factuelle).
+
+Étape 5 — Pourquoi la CI/CD est une bonne pratique de Green IT ?
+-----------------------------------------------------------------
+La CI/CD : (i) rend les analyses reproductibles sans exécutions manuelles
+répétées ; (ii) évite le gaspillage de calcul (exécutions inutiles, versions
+incompatibles) en automatisant tests et erreurs en amont ; (iii) standardise
+environnements/dépendances (moins de reruns, moins d’itérations locales) ;
+(iv) facilite la revue et l’audit (traçabilité des versions, logs) ;
+(v) permet de planifier ou déclencher à l’événement, au lieu d’exécuter
+à l’aveugle. Au total : moins d’énergie consommée, plus d’efficacité et de
+fiabilité — donc une démarche alignée avec le Green IT.
+EOF
+
